@@ -1,0 +1,15 @@
+body {
+    background: rgb(253,187,45);
+    background: linear-gradient(260deg, rgba(253,187,45,1) 0%, rgba(102,189,95,1) 100%);
+}
+
+.judul {
+    text-align: center;
+    margin-top: 80px;
+    border: 5px green inset;
+    border-radius: 2px;
+}
+
+.judul img {
+    height: 55px;
+}
