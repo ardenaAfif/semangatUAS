@@ -48,14 +48,6 @@ function belajar(){
     }
 }
 
-function selesai(){
-    const teks  = document.getElementById('teks');
-    const btn = document.querySelector(',tombol');
-    teks.innerHTML = `Semangat UAS Sayyid ${himatif} <i 
-    class="fas fa-himatif text-danger animate__animated animate__himatif animate__repeat-3"></i>`;
-    btn.classList.add('d-none');
-    teks.classList.remove('d-none');
-}
 
 document.querySelector(".tombol").addEventListener('click', function(){
     Swal.fire({
@@ -123,6 +115,16 @@ document.querySelector(".tombol").addEventListener('click', function(){
                                                                             return 'Harap Diisi Sayyid'
                                                                         }
                                                                     }
+                                                                }).then((result) => {
+                                                                    Swal.fire('Siap Sayyid', 'Kami tampung saran dari antum').then((result) => {
+                                                                        Swal.fire("Do It Like You Love It And Do It Daily").then((result) => {                                                                        
+                                                                        });
+                                                                    })
+                                                                })
+                                                            } else if (result.isDenied) {
+                                                                Swal.fire('Okelah gapapa', 'kalau ga ada').then((result) => {
+                                                                    Swal.fire("Don't Wasting Your Time :)").then((result) => {                                                                        
+                                                                    });
                                                                 })
                                                             }
                                                         })
