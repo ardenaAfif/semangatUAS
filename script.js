@@ -103,7 +103,31 @@ document.querySelector(".tombol").addEventListener('click', function(){
                                                     'Jangan Lupa Shalat !',
                                                     '',
                                                     'error'
-                                                )
+                                                ).then((result) => {
+                                                    Swal.fire('Good Luck for Us').then((result) => {
+                                                        Swal.fire({
+                                                            title: 'Minta Saran Nih Yid',
+                                                            text: 'Apakah ada yang pengin antum sampaikan ?',
+                                                            showDenyButton: true,
+                                                            confirmButtonText: `Ada dong`,
+                                                            denyButtonText: `Ga ada kayanya`,
+                                                        }).then((result) => {
+                                                            if (result.isConfirmed) {
+                                                                Swal.fire({
+                                                                    title: 'Sampaikan Saran Antum',
+                                                                    input: 'text',
+                                                                    inputPlaceholder: 'Silahkan isi disini',
+                                                                    showCancelButton: false,
+                                                                    inputValidator: (value) => {
+                                                                        if(!value) {
+                                                                            return 'Harap Diisi Sayyid'
+                                                                        }
+                                                                    }
+                                                                })
+                                                            }
+                                                        })
+                                                    })
+                                                })
                                             })
                                         })
                                     })
